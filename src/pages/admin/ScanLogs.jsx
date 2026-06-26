@@ -35,9 +35,9 @@ export default function ScanLogs() {
             <tbody>{filtered.map(l => (
               <tr key={l.log_id}>
                 <td><Badge value={l.scan_result} /></td>
-                <td style={{ fontFamily: 'monospace', fontSize: '.75rem' }}>{l.batch_id ? l.batch_id.slice(0, 8) + '…' : '—'}</td>
+                <td style={{ fontFamily: 'monospace', fontSize: '.75rem' }}>{l.batch_id ? l.batch_id.slice(0, 8) + '…' : '-'}</td>
                 <td>{l.scanned_by || 'Anonymous'}</td>
-                <td>{l.location || '—'}</td>
+                <td>{l.location || '-'}</td>
                 <td style={{ fontSize: '.8rem', color: 'var(--grey-500)' }}>{l.ip_address || '—'}</td>
                 <td style={{ fontSize: '.8rem', color: 'var(--grey-500)', whiteSpace: 'nowrap' }}>{new Date(l.scanned_at).toLocaleString()}</td>
               </tr>))}

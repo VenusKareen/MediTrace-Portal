@@ -5,6 +5,7 @@ import StatCard from '../../components/StatCard'
 import Badge from '../../components/Badge'
 import { useAuth } from '../../context/AuthContext'
 import client from '../../api/client'
+import { IconPill, IconCircleCheck, IconClockHour4, IconPackage } from '@tabler/icons-react'
 
 export default function MfgDashboard() {
   const { user } = useAuth()
@@ -43,10 +44,10 @@ export default function MfgDashboard() {
         </div>
       )}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px,1fr))', gap: '1rem', marginBottom: '1.8rem' }}>
-        <StatCard label="Total products" value={data?.totalProducts} icon="💊" accent="#d8f3dc" />
-        <StatCard label="Approved" value={data?.approvedProducts} icon="✅" accent="#d8f3dc" />
-        <StatCard label="Pending review" value={data?.pendingProducts} icon="⏳" accent="#fef3c7" />
-        <StatCard label="Total batches" value={data?.totalBatches} icon="📦" accent="#dbeafe" />
+        <StatCard label="Total products"  value={data?.totalProducts}    icon={<IconPill        size={24} stroke={1.5} />} accent="#d8f3dc" />
+        <StatCard label="Approved"        value={data?.approvedProducts} icon={<IconCircleCheck size={24} stroke={1.5} />} accent="#d8f3dc" />
+        <StatCard label="Pending review"  value={data?.pendingProducts}  icon={<IconClockHour4  size={24} stroke={1.5} />} accent="#fef3c7" />
+        <StatCard label="Total batches"   value={data?.totalBatches}     icon={<IconPackage     size={24} stroke={1.5} />} accent="#dbeafe" />
       </div>
       <div className="card">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>

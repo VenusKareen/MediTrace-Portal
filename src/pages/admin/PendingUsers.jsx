@@ -73,7 +73,7 @@ export default function PendingUsers() {
                 <td>{u.email}</td>
                 <td><Badge value={u.role} /></td>
                 <td><Badge value={u.verification_status} /></td>
-                <td>{u.facility_name || '—'}</td>
+                <td>{u.facility_name || '-'}</td>
               </tr>))}
             </tbody>
           </table></div>

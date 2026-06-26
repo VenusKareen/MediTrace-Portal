@@ -38,9 +38,9 @@ export default function Reports() {
             <thead><tr><th>Medication</th><th>Pharmacy</th><th>Location</th><th>Description</th><th>Status</th><th>Reported</th><th>Actions</th></tr></thead>
             <tbody>{reports.map(r => (
               <tr key={r.report_id}>
-                <td style={{ fontWeight: 600 }}>{r.medication_name || '—'}</td>
-                <td>{r.pharmacy_name || '—'}</td>
-                <td>{r.location || '—'}</td>
+                <td style={{ fontWeight: 600 }}>{r.medication_name || '-'}</td>
+                <td>{r.pharmacy_name || '-'}</td>
+                <td>{r.location || '-'}</td>
                 <td style={{ maxWidth: 220, fontSize: '.8rem', color: 'var(--grey-700)' }}>{r.description ? r.description.slice(0, 80) + (r.description.length > 80 ? '…' : '') : '—'}</td>
                 <td><Badge value={r.status} /></td>
                 <td style={{ fontSize: '.8rem', color: 'var(--grey-500)', whiteSpace: 'nowrap' }}>{new Date(r.created_at).toLocaleDateString()}</td>

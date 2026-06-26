@@ -30,7 +30,13 @@ export default function Login() {
     <div style={{ minHeight: '100vh', background: 'var(--green-900)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
       <div style={{ background: '#fff', borderRadius: 16, padding: '2.5rem', width: '100%', maxWidth: 420, boxShadow: '0 20px 60px rgba(0,0,0,.3)' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <div style={{ width: 60, height: 60, borderRadius: 16, background: 'var(--green-100)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8rem', margin: '0 auto .75rem' }}>💊</div>
+          <div style={{ width: 60, height: 60, borderRadius: 16, background: '#0F6E56', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto .75rem', position: 'relative' }}>
+            <span style={{ fontSize: 26, fontWeight: 500, color: '#E1F5EE', letterSpacing: -1 }}>M</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5DCAA5" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ position: 'absolute', bottom: 4, right: 4 }}>
+              <circle cx="12" cy="12" r="10" fill="#0F6E56" />
+              <path d="M8 12l3 3 5-6" />
+            </svg>
+          </div>
           <h1 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--green-900)' }}>MediTrace Portal</h1>
           <p style={{ color: 'var(--grey-500)', fontSize: '.875rem', marginTop: '.3rem' }}>Pharmaceutical Supply Chain Management</p>
         </div>
